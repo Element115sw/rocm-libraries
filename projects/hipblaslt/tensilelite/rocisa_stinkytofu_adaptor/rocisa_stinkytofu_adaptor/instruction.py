@@ -634,15 +634,11 @@ class VPrngB32(CommonInstruction):
 class SMovB32(CommonInstruction):
     """``s_mov_b32 dst, src`` shim with stinkytofu left-path bridge."""
 
-    def __init__(self, dst: Any, src: Any, sdwa: Any = None,
-                 comment: str = "", dpp: Any = None):
+    def __init__(self, dst: Any, src: Any, comment: str = ""):
         super().__init__(
             instType=InstType.INST_B32,
             dst=dst,
             srcs=[src],
-            dpp=dpp,
-            sdwa=sdwa,
-            vop3=None,
             comment=comment,
         )
         self.setInst("s_mov_b32")
@@ -661,15 +657,11 @@ class SMovB32(CommonInstruction):
 class SMovB64(CommonInstruction):
     """``s_mov_b64 dst, src`` shim with stinkytofu left-path bridge."""
 
-    def __init__(self, dst: Any, src: Any, sdwa: Any = None,
-                 comment: str = "", dpp: Any = None):
+    def __init__(self, dst: Any, src: Any, comment: str = ""):
         super().__init__(
             instType=InstType.INST_B64,
             dst=dst,
             srcs=[src],
-            dpp=dpp,
-            sdwa=sdwa,
-            vop3=None,
             comment=comment,
         )
         self.setInst("s_mov_b64")
