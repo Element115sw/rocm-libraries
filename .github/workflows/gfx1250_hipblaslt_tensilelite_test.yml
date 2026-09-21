@@ -222,7 +222,7 @@ jobs:
       - name: Fetch prebuilt gfx1250 ROCm artifact
         id: fetch
         env:
-          BUILD_RUN_ID: ${{ inputs.build_run_id || github.event.workflow_run.id || '35289418443' }}  # SCRATCH: PR #12282 (revision-marks) build
+          BUILD_RUN_ID: ${{ inputs.build_run_id || github.event.workflow_run.id || '35526244729' }}  # SCRATCH: develop HEAD 3082a49c5c8 build (includes new gfx1250 gemm tests decouple/rap)
           BUILD_REPO: ${{ inputs.build_repo || 'ROCm/rocm-libraries' }}
           GITHUB_TOKEN: ${{ github.token }}
         run: |
